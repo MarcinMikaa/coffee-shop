@@ -17,16 +17,16 @@ const CustomNavbar = ({ brandName }: NavbarProps) => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
-  const navbrStyle = {
+  const navbarStyle = {
     backgroundColor: location.pathname === '/' && !isScrolled ? 'transparent' : 'rgba(0, 0, 0, 0.8)',
     zIndex: 10,
-    transition: 'background-color 0.3s ease',
+    transition: 'background-color 1s ease',
   };
 
   return (
-    <Navbar expand="lg" variant="light" className="position-absolute top-0 w-100" style={navbrStyle}>
+    <Navbar expand="lg" variant="light" className="position-absolute top-0 w-100" style={navbarStyle}>
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="text-white">
           {brandName}

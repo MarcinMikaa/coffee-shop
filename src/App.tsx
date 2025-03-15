@@ -9,7 +9,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <CustomNavbar brandName={'Coffee Shop'} />
+      <CustomNavbar brandName={'Brew & Muse Café'} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />

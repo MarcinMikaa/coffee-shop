@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
     <div className="home-banner" style={{ backgroundImage: `url(${bannerImage})` }}>
       <div className="home-overlay" />
       <Container className="banner-content">
-        <h1>Welcome to Coffee Shop!</h1>
+        <h1>Welcome to Brew & Muse Café!</h1>
         <p className="lead">Enjoy the finest coffee in town.</p>
       </Container>
     </div>
