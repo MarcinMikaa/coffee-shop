@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CustomNavbar from './components/Navbar';
+import CustomNavbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Menu from './pages/Menu/Menu';
 import About from './pages/About/About';
@@ -9,7 +9,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <CustomNavbar />
+      <CustomNavbar brandName={'Coffee Shop'} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
