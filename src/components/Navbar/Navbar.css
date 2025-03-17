@@ -1,32 +1,55 @@
-.custom-nav-link {
-  position: relative;
-  padding-bottom: 0.5rem;
-  margin-left: 1.5rem;
+.custom-navbar {
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.custom-nav-link::after {
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .nav-link {
+  color: white;
+  margin: 0 0.75rem;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #ccc;
+}
+
+.custom-navbar .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: white;
-  transition: width 0.3s ease-in-out;
+  background-color: #ccc;
+  transition: width 0.3s ease;
 }
 
-.custom-nav-link:hover::after {
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
   width: 100%;
 }
 
-.custom-nav-link:hover {
-  color: white;
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.custom-nav-link.active::after {
-  width: 100%;
-}
-
-.custom-nav-link.active {
-  color: white;
+@media (max-width: 991px) {
+  .custom-navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .custom-navbar .navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 }

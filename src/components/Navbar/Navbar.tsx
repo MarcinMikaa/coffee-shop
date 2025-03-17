@@ -8,25 +8,21 @@ interface NavbarProps {
 }
 
 const CustomNavbar = ({ brandName }: NavbarProps) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const offset = window.scrollY;
+      setScrolled(offset > 0);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
-  const navbarStyle = {
-    backgroundColor: location.pathname === '/' && !isScrolled ? 'transparent' : 'rgba(0, 0, 0, 0.8)',
-    zIndex: 10,
-    transition: 'background-color 1s ease',
-  };
-
   return (
-    <Navbar expand="lg" variant="light" className="position-absolute top-0 w-100" style={navbarStyle}>
+    <Navbar expand="lg" fixed="top" className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}>
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="text-white">
           {brandName}
