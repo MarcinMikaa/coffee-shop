@@ -4,17 +4,11 @@
   background-color: #212529;
   color: white;
   padding: 2rem 0;
-  margin-top: auto;
+  padding-top: 2rem;
 }
 
 .footer h5 {
   margin-bottom: 1rem;
-}
-
-.footer a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer a:hover {
@@ -29,4 +23,58 @@
 
 .footer .flex-column .nav-link {
   padding: 0.25rem 0;
+}
+
+.social-links {
+  display: block;
+}
+
+.social-links a {
+  color: wheat;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: antiquewhite;
+  transform: scale(1.1);
+}
+
+.footer-section {
+  display: flex;
+}
+
+.icon {
+  color: wheat;
+  font-size: 1.3rem;
+  padding-right: 1rem;
+}
+
+.copyright {
+  border-top: 1px solid rgb(103, 103, 103);
+  padding-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer-section {
+    display: block;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  .icon {
+    padding: 0;
+  }
 }
