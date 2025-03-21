@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer bg-dark text-white py-4">
       <Container>
         <Row>
-          <Col md={4} className="mb-3 mb-md-0">
+          <Col md={3} className="mb-3 mb-md-0">
             <h5 className="fw-bold">Brew & Muse Café</h5>
             <Nav className="flex-column">
               <Nav.Link as={NavLink} to="/" className="text-white p-0">
@@ -25,20 +25,40 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col md={4} className="mb-3 mb-md-0">
+          <Col md={3} className="mb-3 mb-md-0">
             <h5 className="fw-bold">Contact Us</h5>
-            <p className="mb-1">Email: hello@coffeeshop.com</p>
-            <p className="mb-1">Phone: +48 123 456 789</p>
+            <p className="mb-1">
+              <strong>Email:</strong> hello@coffeeshop.com
+            </p>
+            <p className="mb-1">
+              <strong>Phone:</strong> +48 123 456 789
+            </p>
           </Col>
 
-          <Col md={4}>
+          <Col md={3} className="mb-3 mb-md-0">
+            <h5 className="fw-bold">Contact Us</h5>
+            <p className="mb-1">
+              <strong>Email:</strong> hello@coffeeshop.com
+            </p>
+            <p className="mb-1">
+              <strong>Phone:</strong> +48 123 456 789
+            </p>
+          </Col>
+
+          <Col md={3}>
             <h5 className="fw-bold">Follow Us</h5>
-            <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white me-3">
-                Facebook
+            <div className="social-links d-flex">
+              <a href="#" className="twitter">
+                <i className="bi bi-facebook"></i>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white me-3">
-                Instagram
+              <a href="#" className="facebook">
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="#" className="instagram">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="#" className="linkedin">
+                <i className="bi bi-linkedin"></i>
               </a>
             </div>
           </Col>
