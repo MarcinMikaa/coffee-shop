@@ -1,0 +1,101 @@
+.menu-page {
+  background-color: #fff;
+}
+
+.menu-banner {
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.menu-content {
+  padding: 3rem 0;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-buttons .menu-btn {
+  width: 100px;
+  height: 40px;
+  margin: 0.5rem;
+  font-weight: bold;
+  padding: 0;
+  background-color: #fff;
+  color: #4a2c2a;
+  border: 2px solid #4a2c2a;
+  border-radius: 20px;
+  transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  line-height: 36px;
+  display: inline-block;
+}
+
+.menu-buttons .menu-btn.active {
+  width: 150px;
+  background-color: #4a2c2a;
+  color: #fff;
+  border-color: #4a2c2a;
+}
+
+.menu-buttons .menu-btn:hover {
+  border: 2px solid #4a2c2a;
+  background-color: #3c2f2f;
+  color: #fff;
+}
+
+.menu-page .menu-buttons .menu-btn:active,
+.menu-page .menu-buttons .menu-btn:focus {
+  background-color: #3c2f2f;
+  color: #fff;
+  border-color: #4a2c2a;
+  outline: none;
+}
+
+.menu-card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card .card-body {
+  text-align: center;
+}
+
+.menu-price {
+  font-weight: bold;
+  color: #4a2c2a;
+}
