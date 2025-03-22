@@ -1,5 +1,5 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -24,10 +24,12 @@ const CustomNavbar = ({ brandName }: NavbarProps) => {
   return (
     <Navbar expand="lg" fixed="top" className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}>
       <Container>
-        <Navbar.Brand as={NavLink} to="/" className="text-white">
+        <Navbar.Brand as={NavLink} to="/" className="brand-name">
           {brandName}
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} to="/" className="custom-nav-link text-white">
@@ -41,6 +43,18 @@ const CustomNavbar = ({ brandName }: NavbarProps) => {
             </Nav.Link>
             <Nav.Link as={NavLink} to="/contact" className="custom-nav-link text-white">
               Contact
+            </Nav.Link>
+          </Nav>
+
+          <Nav className="ms-auto cafe-social-icons">
+            <Nav.Link href="https://twitter.com" target="_blank">
+              <i className="bi bi-twitter social-icon"></i>
+            </Nav.Link>
+            <Nav.Link href="https://facebook.com" target="_blank">
+              <i className="bi bi-facebook social-icon"></i>
+            </Nav.Link>
+            <Nav.Link href="https://instagram.com" target="_blank">
+              <i className="bi bi-instagram social-icon"></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
