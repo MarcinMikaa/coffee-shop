@@ -75,11 +75,21 @@
   font-size: 1.4rem;
 }
 
+.navbar-toggler {
+  border: none;
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
 @media (max-width: 991px) {
   .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(26, 26, 26, 0.9);
   }
-  .custom-navbar .navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.9);
+
+  .navbar-collapse {
+    background-color: rgba(26, 26, 26, 0.9);
   }
 }
