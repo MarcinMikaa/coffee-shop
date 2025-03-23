@@ -1,46 +1,102 @@
-.menu-page {
-  background-color: #fff;
-}
-
-.menu-banner {
+.welcome-section {
+  position: relative;
+  height: 60vh;
   background-size: cover;
   background-position: center;
-  height: 40vh;
-  width: 100vw;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-align: center;
-  margin: 0;
   overflow: hidden;
 }
 
-.menu-overlay {
+.welcome-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(40, 28, 12, 0.6);
 }
 
-.menu-title {
+.welcome-content {
   position: relative;
+  text-align: center;
+  color: #fff;
   z-index: 1;
-  font-size: 3rem;
-  margin: 0;
+  transition: transform 0.1s ease;
 }
 
-.menu-content {
-  padding: 3rem 0;
+.welcome-title {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeInDown 1.5s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.5s ease-in-out 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-section {
+  background-color: #f9f5f0;
+  margin: 3rem 0 1rem 0;
+  padding: 1rem 0;
+}
+
+.intro-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.intro-icon {
+  font-size: 2.5rem;
+  color: #4a2c2a;
+  margin-bottom: 0.5rem;
+}
+
+.intro-item h3 {
+  font-size: 1.3rem;
+  color: #4a2c2a;
+  margin-bottom: 0.5rem;
+}
+
+.intro-item p {
+  font-size: 1rem;
+  color: #3c2f2f;
 }
 
 .menu-buttons {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  border-bottom: 2px solid rgb(147, 147, 147);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .menu-buttons .menu-btn {
@@ -95,7 +151,21 @@
   text-align: center;
 }
 
-.menu-price {
+.menu-card .menu-image {
+  height: 350px;
+  object-fit: cover;
+}
+
+.menu-card .menu-title {
+  font-size: 1.5rem;
+}
+
+.menu-card .menu-description {
+  color: rgb(104, 104, 104);
+}
+
+.menu-card .menu-price {
+  font-size: 1.2rem;
   font-weight: bold;
   color: #4a2c2a;
 }

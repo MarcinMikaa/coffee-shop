@@ -1,0 +1,154 @@
+{
+  "coffees": [
+    {
+      "name": "Espresso",
+      "description": "Rich and bold single shot.",
+      "price": "8 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758338/espresso.jpg"
+    },
+    {
+      "name": "Latte",
+      "description": "Smooth espresso with steamed milk.",
+      "price": "12 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758449/latte.jpg"
+    },
+    {
+      "name": "Cappuccino",
+      "description": "Espresso with frothy milk foam.",
+      "price": "11 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758286/cappuccion.jpg"
+    },
+    {
+      "name": "Americano",
+      "description": "Espresso diluted with hot water.",
+      "price": "9 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758612/americano.jpg"
+    },
+    {
+      "name": "Flat White",
+      "description": "Double espresso with velvety milk.",
+      "price": "13 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758663/flat_white.jpg"
+    },
+    {
+      "name": "Mocha",
+      "description": "Espresso with chocolate and steamed milk.",
+      "price": "14 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742758724/mocha.jpg"
+    }
+  ],
+  "cakes": [
+    {
+      "name": "Cheesecake",
+      "description": "Creamy classic with a biscuit base.",
+      "price": "14 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742759443/cheesecake.jpg"
+    },
+    {
+      "name": "Chocolate Cake",
+      "description": "Decadent layers of chocolate.",
+      "price": "15 PLN",
+      "image": "https://res.cloudinary.com/dqnsvneww/image/upload/v1742759490/chocolate_cake.jpg"
+    },
+    {
+      "name": "Carrot Cake",
+      "description": "Moist cake with cream cheese frosting.",
+      "price": "13 PLN",
+      "image": ""
+    },
+    {
+      "name": "Lemon Tart",
+      "description": "Tangy lemon curd in a crisp pastry shell.",
+      "price": "12 PLN",
+      "image": ""
+    },
+    {
+      "name": "Apple Pie",
+      "description": "Warm spiced apples in flaky pastry.",
+      "price": "14 PLN",
+      "image": ""
+    },
+    {
+      "name": "Red Velvet",
+      "description": "Velvety cake with cream cheese icing.",
+      "price": "15 PLN",
+      "image": ""
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Iced Tea",
+      "description": "Refreshing lemon-infused tea.",
+      "price": "9 PLN",
+      "image": ""
+    },
+    {
+      "name": "Hot Chocolate",
+      "description": "Rich cocoa with whipped cream.",
+      "price": "10 PLN",
+      "image": ""
+    },
+    {
+      "name": "Orange Juice",
+      "description": "Freshly squeezed daily.",
+      "price": "8 PLN",
+      "image": ""
+    },
+    {
+      "name": "Matcha Latte",
+      "description": "Vibrant green tea with steamed milk.",
+      "price": "13 PLN",
+      "image": ""
+    },
+    {
+      "name": "Chai Latte",
+      "description": "Spiced tea with warm milk.",
+      "price": "12 PLN",
+      "image": ""
+    },
+    {
+      "name": "Sparkling Water",
+      "description": "Crisp and lightly carbonated.",
+      "price": "6 PLN",
+      "image": ""
+    }
+  ],
+  "snacks": [
+    {
+      "name": "Croissant",
+      "description": "Buttery and flaky perfection.",
+      "price": "7 PLN",
+      "image": ""
+    },
+    {
+      "name": "Muffin",
+      "description": "Blueberry-filled delight.",
+      "price": "8 PLN",
+      "image": ""
+    },
+    {
+      "name": "Sandwich",
+      "description": "Ham and cheese on fresh bread.",
+      "price": "12 PLN",
+      "image": ""
+    },
+    {
+      "name": "Bagel",
+      "description": "Toasted with cream cheese spread.",
+      "price": "9 PLN",
+      "image": ""
+    },
+    {
+      "name": "Pretzel",
+      "description": "Soft, salty, and freshly baked.",
+      "price": "6 PLN",
+      "image": ""
+    },
+    {
+      "name": "Scone",
+      "description": "Served with jam and clotted cream.",
+      "price": "8 PLN",
+      "image": ""
+    }
+  ]
+}
