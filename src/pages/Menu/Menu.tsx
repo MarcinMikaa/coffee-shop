@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import menuBanner from '../../assets/banner.jpg';
+import menuBanner from '../../assets/home-banner.jpg';
 import menuData from '../../data/menuData.json';
 import './Menu.css';
 
@@ -22,7 +22,6 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<keyof MenuData>('coffees');
   const [scrollY, setScrollY] = useState(0);
 
-  // Parallax effect
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);

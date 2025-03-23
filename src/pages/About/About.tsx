@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import aboutBanner from '../../assets/banner.jpg';
+import aboutBanner from '../../assets/home-banner.jpg';
 import teamMember1 from '../../assets/team1.png';
 import './About.css';
 
