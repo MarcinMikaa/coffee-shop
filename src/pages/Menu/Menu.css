@@ -1,6 +1,7 @@
-.welcome-section {
+.menu-banner {
   position: relative;
-  height: 60vh;
+  height: 50vh;
+  padding-top: 5rem;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -9,7 +10,7 @@
   overflow: hidden;
 }
 
-.welcome-overlay {
+.menu-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +19,7 @@
   background-color: rgba(40, 28, 12, 0.6);
 }
 
-.welcome-content {
+.menu-content {
   position: relative;
   text-align: center;
   color: #fff;
@@ -26,14 +27,14 @@
   transition: transform 0.1s ease;
 }
 
-.welcome-title {
+.menu-title {
   font-size: 4rem;
   font-weight: bold;
   animation: fadeInDown 1.5s ease-in-out;
   margin-bottom: 1rem;
 }
 
-.welcome-subtitle {
+.menu-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   animation: fadeInUp 1.5s ease-in-out 0.3s;
@@ -65,7 +66,7 @@
 
 .intro-section {
   background-color: #f9f5f0;
-  margin: 3rem 0 1rem 0;
+  margin: 4rem 0 1rem 0;
   padding: 1rem 0;
 }
 
@@ -94,9 +95,9 @@
 .menu-buttons {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 2px solid rgb(147, 147, 147);
+  border-bottom: 2px solid #4a2c2a;
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .menu-buttons .menu-btn {
@@ -124,13 +125,13 @@
 
 .menu-buttons .menu-btn:hover {
   border: 2px solid #4a2c2a;
-  background-color: #3c2f2f;
+  background-color: #4a2c2a;
   color: #fff;
 }
 
 .menu-page .menu-buttons .menu-btn:active,
 .menu-page .menu-buttons .menu-btn:focus {
-  background-color: #3c2f2f;
+  background-color: #4a2c2a;
   color: #fff;
   border-color: #4a2c2a;
   outline: none;
@@ -138,13 +139,13 @@
 
 .menu-card {
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
 .menu-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .menu-card .card-body {
@@ -153,7 +154,14 @@
 
 .menu-card .menu-image {
   height: 350px;
+  width: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+  transform-origin: bottom;
+}
+
+.menu-card:hover .menu-image {
+  transform: scale(1.05);
 }
 
 .menu-card .menu-title {
@@ -168,4 +176,14 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #4a2c2a;
+}
+
+@media (max-width: 767px) {
+  .menu-title {
+    font-size: 3rem;
+  }
+
+  .menu-subtitle {
+    font-size: 1.5rem;
+  }
 }

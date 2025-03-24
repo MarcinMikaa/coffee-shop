@@ -1,6 +1,6 @@
-import { ReactNode, useState, useEffect } from 'react';
+import { ReactNode, useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import menuBanner from '../../assets/home-banner.jpg';
+import menuBanner from '../../assets/menu-banner.jpg';
 import menuData from '../../data/menuData.json';
 import './Menu.css';
 
@@ -20,13 +20,6 @@ interface MenuData {
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<keyof MenuData>('coffees');
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const renderMenuItems = (category: keyof MenuData): ReactNode[] => {
     return menuData[category].map((item, index) => (
@@ -45,12 +38,12 @@ const Menu = () => {
 
   return (
     <div className="menu-page">
-      <div className="welcome-section" style={{ backgroundImage: `url(${menuBanner})` }}>
-        <div className="welcome-overlay" />
-        <div className="welcome-content" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
-          <h1 className="welcome-title">Welcome to Cafe Delights</h1>
-          <p className="welcome-subtitle">Indulge in the finest coffee and treats</p>
-        </div>
+      <div className="menu-banner" style={{ backgroundImage: `url(${menuBanner})` }}>
+        <div className="menu-overlay" />
+        <Container className="menu-content">
+          <h1 className="menu-title">Taste the Magic</h1>
+          <p className="menu-subtitle">Discover your new favorite treat</p>
+        </Container>
       </div>
 
       <Container className="intro-section">
