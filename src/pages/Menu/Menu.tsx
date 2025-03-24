@@ -2,6 +2,7 @@ import { ReactNode, useState } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import menuBanner from '../../assets/menu-banner.jpg';
 import menuData from '../../data/menuData.json';
+import Banner from '../../components/Banner/Banner';
 import './Menu.css';
 
 interface MenuItem {
@@ -38,13 +39,7 @@ const Menu = () => {
 
   return (
     <div className="menu-page">
-      <div className="menu-banner" style={{ backgroundImage: `url(${menuBanner})` }}>
-        <div className="menu-overlay" />
-        <Container className="menu-content">
-          <h1 className="menu-title">Taste the Magic</h1>
-          <p className="menu-subtitle">Discover your new favorite treat</p>
-        </Container>
-      </div>
+      <Banner title="Taste the Magic" subtitle="Discover your new favorite treat" backgroundImage={menuBanner} />
 
       <Container className="intro-section">
         <Row>

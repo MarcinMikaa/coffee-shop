@@ -1,14 +1,12 @@
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import ContactBannerImage from '../../assets/contact-banner.jpg';
+import contactBanner from '../../assets/contact-banner.jpg';
+import Banner from '../../components/Banner/Banner';
 import './Contact.css';
 
 const Contact = () => {
   return (
     <div className="contact-page">
-      <div className="contact-banner" style={{ backgroundImage: `url(${ContactBannerImage})` }}>
-        <div className="contact-overlay" />
-        <h1 className="contact-title">Contact Us</h1>
-      </div>
+      <Banner title="Contact Us" backgroundImage={contactBanner} />
 
       <Container className="contact-content py-5">
         <Row className="">
@@ -83,7 +81,7 @@ const Contact = () => {
           </Col>
 
           <Col md={5} className="ms-auto">
-            <div className="image-section" style={{ backgroundImage: `url(${ContactBannerImage})` }}></div>
+            <div className="image-section" style={{ backgroundImage: `url(${contactBanner})` }}></div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.837!2d21.012228!3d52.229676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zNTLCsDEzJzQ2LjgiTiAyMcKwMDAnNDQuMCJF!5e0!3m2!1sen!2spl!4v1630000000000"
               width="100%"

@@ -2,14 +2,12 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import aboutBanner from '../../assets/home-banner.jpg';
 import teamMember1 from '../../assets/team1.png';
 import './About.css';
+import Banner from '../../components/Banner/Banner';
 
 const About = () => {
   return (
     <div className="about-page">
-      <div className="about-banner" style={{ backgroundImage: `url(${aboutBanner})` }}>
-        <div className="about-overlay" />
-        <h1 className="about-title">About Coffee Shop</h1>
-      </div>
+      <Banner title="Our History" backgroundImage={aboutBanner} />
 
       <Container className="about-content py-5">
         <Row className="mb-5 text-center intro-section">
