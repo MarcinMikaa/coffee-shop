@@ -1,8 +1,8 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import aboutBanner from '../../assets/home-banner.jpg';
 import teamMember1 from '../../assets/team1.png';
-import './About.css';
 import Banner from '../../components/Banner/Banner';
+import './About.css';
 
 const About = () => {
   return (
