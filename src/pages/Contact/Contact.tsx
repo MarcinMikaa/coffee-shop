@@ -97,7 +97,7 @@ const Contact = () => {
                   required
                   className="custom-input"
                 />
-                <label htmlFor="formEmail">Email</label>
+                <label htmlFor="formEmail">E-mail</label>
               </Form.Floating>
 
               <Form.Floating className="mb-3">

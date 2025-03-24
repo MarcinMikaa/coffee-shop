@@ -1,5 +1,5 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -9,6 +9,12 @@ interface NavbarProps {
 
 const CustomNavbar = ({ brandName }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +28,12 @@ const CustomNavbar = ({ brandName }: NavbarProps) => {
   }, []);
 
   return (
-    <Navbar expand="lg" fixed="top" className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}>
+    <Navbar
+      expand="lg"
+      fixed="top"
+      className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}
+      expanded={expanded}
+      onToggle={(isExpanded) => setExpanded(isExpanded)}>
       <Container>
         <Navbar.Brand as={NavLink} to="/" className="brand-name">
           {brandName}
