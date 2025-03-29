@@ -6,7 +6,8 @@ import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     message: '',
   });
@@ -19,18 +20,95 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted', formData);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ firstName: '', lastName: '', email: '', message: '' });
   };
 
   return (
     <div className="contact-page">
       <div className="background-decor" />
-      <Banner title="Get in Touch" backgroundImage={contactBanner} />
+      <Banner title="Reach Out Anytime" backgroundImage={contactBanner} />
 
       <Container className="contact-content py-6">
+        <Row className="mb-5 text-center">
+          <Col>
+            <h2 className="contact-subtitle">Get in Touch</h2>
+            <p className="contact-lead">
+              Have questions, suggestions, or simply want to talk about coffee? We're here for you! Reach out to us via
+              email, phone, or visit us at our cozy café in the heart of Warsaw.
+            </p>
+          </Col>
+        </Row>
+
         <Row className="g-5">
-          <Col md={6} lg={6}>
-            <h2 className="section-title mb-4">Contact Details</h2>
+          <Col md={12} lg={6}>
+            <Form onSubmit={handleSubmit}>
+              <Row>
+                <Col>
+                  <Form.Floating className="mb-3">
+                    <Form.Control
+                      id="formFirstName"
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Your First Name"
+                      required
+                      className="custom-input"
+                    />
+                    <label htmlFor="formFirstName">First Name</label>
+                  </Form.Floating>
+                </Col>
+                <Col>
+                  <Form.Floating className="mb-3">
+                    <Form.Control
+                      id="formLastName"
+                      type="text"
+                      name="lastNameame"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Your Last Name"
+                      required
+                      className="custom-input"
+                    />
+                    <label htmlFor="formName">Last Name</label>
+                  </Form.Floating>
+                </Col>
+              </Row>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="formEmail"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                  className="custom-input"
+                />
+                <label htmlFor="formEmail">E-mail</label>
+              </Form.Floating>
+
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="formMessage"
+                  as="textarea"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  required
+                  className="custom-input"
+                  style={{ height: '100px' }}
+                />
+                <label htmlFor="formMessage">Message</label>
+              </Form.Floating>
+              <Button variant="dark" type="submit" className="submit-btn">
+                Send Message
+              </Button>
+            </Form>
+          </Col>
+
+          <Col md={12} lg={6}>
             <div className="contact-info">
               <div className="info-item">
                 <i className="bi bi-geo-alt-fill me-3 icon"></i>
@@ -68,62 +146,10 @@ const Contact = () => {
               </div>
             </div>
           </Col>
-
-          <Col md={6} lg={6}>
-            <h2 className="section-title mb-4">Send Us a Message</h2>
-            <Form onSubmit={handleSubmit}>
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="formName"
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                  className="custom-input"
-                />
-                <label htmlFor="formName">Full Name</label>
-              </Form.Floating>
-
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="formEmail"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  required
-                  className="custom-input"
-                />
-                <label htmlFor="formEmail">E-mail</label>
-              </Form.Floating>
-
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="formMessage"
-                  as="textarea"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your Message"
-                  required
-                  className="custom-input"
-                  style={{ height: '60px' }}
-                />
-                <label htmlFor="formMessage">Message</label>
-              </Form.Floating>
-              <Button variant="dark" type="submit" className="submit-btn">
-                Send Message
-              </Button>
-            </Form>
-          </Col>
         </Row>
 
         <Row className="mt-5">
           <Col>
-            <h2 className="section-title mb-4 text-center">How to Find Us</h2>
             <div className="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.837!2d21.012228!3d52.229676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zNTLCsDEzJzQ2LjgiTiAyMcKwMDAnNDQuMCJF!5e0!3m2!1sen!2spl!4v1630000000000"
