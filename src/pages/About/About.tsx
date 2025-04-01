@@ -2,6 +2,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import aboutBanner from '../../assets/home-banner.jpg';
 import teamMember1 from '../../assets/team1.png';
 import Banner from '../../components/Banner/Banner';
+import HistorySection from '../../components/HistorySection/HistorySection';
 import './About.css';
 
 const About = () => {
@@ -10,16 +11,7 @@ const About = () => {
       <Banner title="Our History" backgroundImage={aboutBanner} />
 
       <Container className="about-content py-5">
-        <Row className="mb-5 text-center intro-section">
-          <Col>
-            <h2 className="about-subtitle">Crafting Moments, One Cup at a Time</h2>
-            <p className="lead">
-              Welcome to Coffee Shop, where passion for coffee meets a warm, inviting atmosphere. Established in the
-              heart of Warsaw, we've been brewing exceptional coffee since 2015, bringing together locals and travelers
-              alike.
-            </p>
-          </Col>
-        </Row>
+        <HistorySection />
 
         <div className="story-section">
           <Container>
