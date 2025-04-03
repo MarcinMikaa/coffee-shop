@@ -6,10 +6,12 @@ import Menu from './pages/Menu/Menu';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import './App.css';
+import ResetScroll from './components/ResetScroll';
 
 const App = () => {
   return (
     <Router>
+      <ResetScroll />
       <CustomNavbar brandName={'Brew & Muse Café'} />
       <Routes>
         <Route path="/" element={<Home />} />
